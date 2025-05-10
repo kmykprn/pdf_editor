@@ -43,11 +43,10 @@ def convert_uploaded_images_to_pdf(image_list: List[str]):
     Gradioから受け取った画像のリストをPDFに変換
 
     Args:
-        image_list: アップロードされたPIL画像のリスト
-        pdf_name: 出力するPDFの名前（拡張子なし）
+        image_list: アップロードされた画像のパス名
 
     Returns:
-        ステータスメッセージ, PDFファイルへのパス
+        PDFファイルへのパス（一時ファイル）
     """
     try:
         if not image_list:
